@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  
+  get("/", { :controller => "users", :action => "index" })
+  
+  
+  #routes for user 
+
+  get("/users", { :controller => "users", :action => "index" })
+
+  
+  
   # Routes for the Comment resource:
 
   # CREATE
@@ -101,6 +111,8 @@ Rails.application.routes.draw do
   get("/user_sign_out", { :controller => "user_authentication", :action => "destroy_cookies" })
              
   #------------------------------
+
+
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
