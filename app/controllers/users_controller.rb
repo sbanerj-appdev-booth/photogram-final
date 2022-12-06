@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
 
-    #@list_of_comments = matching_comments.order({ :created_at => :desc })
+    @list_of_users = @users.order({ :username => :asc })
 
     render({ :template => "users/index.html.erb" })
   end
